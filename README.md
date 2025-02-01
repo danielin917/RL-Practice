@@ -235,6 +235,9 @@ This 16‑week course provides an in‐depth exploration of reinforcement learni
 
 ## Recommended Research Papers & Articles
 
+- https://spinningup.openai.com/en/latest/spinningup/keypapers.html
+- https://github.com/dzyim/ilya-sutskever-recommended-reading?utm_source=chatgpt.com
+
 1. **Foundational & Breakthrough Papers:**
    - *Playing Atari with Deep Reinforcement Learning* – Mnih et al. (2013)
    - *Human-level Control through Deep Reinforcement Learning* – Mnih et al. (2015)
