@@ -1,0 +1,98 @@
+What is RL?
+
+Formalism for learning-based decision making. Approach for learning decision
+making from experience
+
+As opposed to supervised learning where model tries to learn the data
+distribution provided by the data.
+Supervised learning assumes I.I.D (X, Y) pairs are independent (label for one x
+does not affect label for another x). The same function is used to create
+label. Assumes there is always a label and it is the "true" label.
+
+RL does not assume IID. Previous output influences future. Ground truth is not
+known, only successes or failures are known.
+
+Credit Assignment: The decision that results in bad or good outcome might not
+be label with high reward and reward might actually come much later.
+
+
+
+Supervised learning.
+Input: X
+Output: Y
+Data: D = {(xi, yi)}
+
+Goal is to learn function
+f_theta(xi) ~= yi
+
+
+In RL:
+cyclical online learning
+
+Agent -> Action A_t -> Environment
+ ^^                      |
+ ||                      V
+ ||------Reward t+1 <-----
+ |-------State t+1
+
+
+Agent acts on the world. The world responds with it's state and reward signal.
+Reward signal indicates how good the state is but NOT how good the action was.
+
+input: s_t at each time step
+output: a_t at each time step
+data: (s_1,a_1,r_1,....,sT,aT,rT) <---Collected by agent itself typically and agent picks it's own actions
+
+Goal is to learn policy pi_theta
+(theta again is set of parameters, maybe weights for NN)
+goal: pi_theta: s_t->a_t
+         to maximize sum_t { r_t } <- Maximize TOTAL award accumulated.
+
+We want the machine to discover NOVEL solutions that are not represented at all
+in the training data
+
+Data Drive AI      vs                  RL
+
+Use data from             Optimizes a goal with emergent behavior
+real world. Don't
+try to be better
+than data.
+
+Data without optimization doesn't allow us to solve new problems in new ways.
+
+Richard Sutton Article. (founded RL in CS)
+"The Bitter Lesson" (2019)
+----
+"...building in how we think we think does not work int the long run....The
+two methods that seem to scale arbitrarily ... are learning and search."
+----
+
+Learning
+Use data to extract patterns
+
+Search
+Use computation to extract inferences. (essentially optimization)
+
+
+World -> Learn <--> Optimization
+
+Sometimes figuring out the reward itself is hard itself. How do you reward in
+order to train to pick up and pour water? Sometimes rewards occur very rarely.
+
+Are there other forms of supervision?
+- Learn from demonstrations (inverse RL)
+- Learn from observing world
+- Learning from other tasks
+
+More than imitation. Inferring intention of other agent and can even come up
+with new ac tions that accomplish the inferred goal.
+
+Prediction is important to how animals learn about the world. Model can learn
+to predict what will happen given different actions by the agent.
+
+Leveraging advances in pretrained models.
+(Vision-Language-Action Models)
+
+Why Deep RL
+Deep = scalable learning from large complex datasets
+RL = Optimization

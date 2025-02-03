@@ -1,0 +1,27 @@
+Observation Normalization:
+  Input data is transformed to have specific statistical properties. Enhances
+  efficiency and stability of training algorithms. In RL, observations from the
+  environment can vary widely in scale and distribution.
+  Example methods:
+    Standardization: Adjust observations to have a mean of zero and stddev of 1
+    Min-Max Scaling: Scaling observations to a specific range
+
+Kullback-Leibler (KL) Divergence:
+  A statistical measure that quantifies how one probability distribution
+  diverges from another. A fundamental concept in information theory known as
+  relative entropy and is used for comparing similarity between distributions.
+  Mathematically: D_KL(P || Q) = sum_{x in X} P(x) * log(P(x) / Q(x))
+  The KL divergence measures the expected number of extra bits required to code
+  samples from P using a code optimized for Q rather than one optimized for P.
+
+  - Can be used to assess how well a model distribution approximates true
+    distribution.
+  - Can be used as a regularization term during training to penalize deviation
+    from a well known distribution. https://arxiv.org/pdf/2212.11275
+  - Central to variational inference methods where it measures difference
+    between approximate and true posterior distributions.
+
+Variational Inference: TODO
+
+Thunk:
+ Term used to describe function that has no parameters that can be run later. 
